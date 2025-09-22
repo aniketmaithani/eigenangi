@@ -31,6 +31,12 @@ dependencies = [
 [project.optional-dependencies]
 dev = ["pytest", "pytest-cov", "mypy", "ruff"]
 
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
 [project.urls]
 Homepage = "https://github.com/aniketmaithani/eigenangi"
 "Bug Tracker" = "https://github.com/aniketmaithani/eigenangi/issues"
