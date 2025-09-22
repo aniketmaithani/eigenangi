@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eigenangi"
+version = "0.1.0"
+description = "A clean, extensible cloud utilities toolkit. Start with EC2 machine type discovery."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Aniket Maithani" }]
+keywords = ["aws", "ec2", "instance-types", "cloud", "utilities"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+dependencies = [
+  "boto3>=1.26,<2",
+  "botocore>=1.29,<2",
+  "python-dotenv>=1.0.0"
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "mypy", "ruff"]
+
+[project.urls]
+Homepage = "https://github.com/aniketmaithani/eigenangi"
+"Bug Tracker" = "https://github.com/aniketmaithani/eigenangi/issues"
+
+[project.scripts]
+eigenangi-ec2 = "eigenangi.ec2.ec2:main"
