@@ -10,7 +10,6 @@ Configuration resolution:
 3) Optional TOML file at ~/.config/eigenangi/config.toml with same keys.
 """
 from __future__ import annotations
-import os
 from pathlib import Path
 from typing import Dict, Optional
 
